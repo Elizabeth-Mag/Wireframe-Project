@@ -1,6 +1,26 @@
 .gridspace {
-  width: 350px;
+  width: 70px;
   height: 70px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
+  padding: 1px;
+  /*border: 1px solid #aaaaaa;*/
 }
+
+.container {
+  display: grid;
+  grid-gap: 1px;
+  border: 1px solid #aaaaaa;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 400px;
+  height: 400px;
+  padding: 1px;
+  align-items: center;
+  background-color: dodgerblue;
+}
+.container div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 1px;
+  font-size: 30px;
+  text-align: center;
+}
+
