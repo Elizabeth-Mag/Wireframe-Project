@@ -7,8 +7,11 @@
         <script src="JavaScript/Main.js"></script>
     </head>
     <body>
-        
-        <div id="container" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"  content= "createGrid(4, 4)" ></div>
+        <div class="controls">
+            <button onclick="updateGrid(4, 4)">4x4 Grid</button>
+            <button onclick="updateGrid(6, 3)">6x3 Grid</button>
+        </div>
+        <div id="grid-container" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
         <img id="img1" src="images/Placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="70" height="70">
     </body>
 </html>

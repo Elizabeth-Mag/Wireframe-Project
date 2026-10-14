@@ -1,6 +1,18 @@
-#container{
-  border: 2px black solid;
-  padding: 4px;
-  margin: 4px;
+
+#grid-container {
   display: grid;
+  gap: 5px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.grid-cell {
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
 }
