@@ -10,8 +10,14 @@
         <div class="controls">
             <button onclick="updateGrid(4, 4)">4x4 Grid</button>
             <button onclick="updateGrid(6, 3)">6x3 Grid</button>
+            <button onclick="updateGrid(9, 16)">9x16 Grid</button>
+            <button onclick="updateGrid(10, 16)">10x16 Grid</button>
         </div>
         <div id="grid-container" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
-        <img id="img1" src="images/Placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="70" height="70">
+        <br>
+        <div class="tool-list">
+        <img id="img1" src="images/Placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
+        <img id="img1" src="images/Placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
+        </div>
     </body>
 </html>

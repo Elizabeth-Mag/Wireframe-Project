@@ -1,4 +1,4 @@
-//Setting up drag and drop
+//Setting up drag and drop... I think
 function dragstartHandler(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
@@ -25,14 +25,14 @@ function dropHandler2(ev) {
 function updateGrid(rows, cols) {
   const container = document.getElementById('grid-container');
   
-  // Clear any existing cells
+  // trash prev grid
   container.innerHTML = '';
   
   // Set the grid template columns and rows
   container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
   
-  // Populate the grid with items
+  // fill the grid with items
   const totalCells = rows * cols;
   for (let i = 1; i <= totalCells; i++) {
     const cell = document.createElement('div');
