@@ -3,6 +3,12 @@ function dragstartHandler(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
 
+function dragstartHandler2(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+
+
 function dragoverHandler(ev) {
   ev.preventDefault(); // Default is open as link on drop 
 }
@@ -22,6 +28,8 @@ function dropHandler2(ev) {
 }
 
 
+
+//grid stuff
 function updateGrid(rows, cols) {
   const container = document.getElementById('grid-container');
   

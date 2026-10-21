@@ -8,16 +8,18 @@
     </head>
     <body>
         <div class="controls">
-            <button onclick="updateGrid(4, 4)">4x4 Grid</button>
-            <button onclick="updateGrid(6, 3)">6x3 Grid</button>
-            <button onclick="updateGrid(9, 16)">9x16 Grid</button>
-            <button onclick="updateGrid(10, 16)">10x16 Grid</button>
+            <a href="home.html"><button class="btn">Back Home</button></a>
+            <button class="btn" onclick="updateGrid(4, 4)">4x4 Grid</button>
+            <button class="btn" onclick="updateGrid(6, 3)">6x3 Grid</button>
+            <button class="btn" onclick="updateGrid(9, 16)">9x16 Grid</button>
+            <button class="btn" onclick="updateGrid(10, 16)">10x16 Grid</button>
         </div>
-        <div id="grid-container" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+        <div id="grid-container" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" ondragstart="dragstartHandler2(event)"></div>
         <br>
         <div class="tool-list">
-        <img id="img1" src="images/Placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
-        <img id="img1" src="images/Placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
+            <img id="img1" src="images/text-placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
+            <img id="img2" src="images/img-palceholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
+            <blockquote contenteditable="true" draggable="true" ondragstart="dragstartHandler(event)"><p>Edit Text</p></blockquote>
         </div>
     </body>
 </html>

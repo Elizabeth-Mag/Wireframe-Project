@@ -10,6 +10,21 @@
   max-width: 60px;
 }
 
+blockquote {
+  background: #eeeeee;
+  margin: 0;
+}
+
+blockquote p {
+  padding: 5%;
+  height: 52px;
+  width: 52px;
+}
+
+[contenteditable="true"] {
+  caret-color: black;
+}
+
 .grid-cell {
   background-color: #ffffff;
   display: flex;
@@ -24,6 +39,18 @@
   grid-template-columns: 60px;
   gap: 5px;
   padding: 10px;
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 25%;
+  height: 50px;
+  width: 100px;
+  cursor: pointer; /* I love this so much its such a small thing but its so neat!! */
+}
+
+.btn:hover {
+  background-color: #0056b3; 
 }
 
 body {
