@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Final Project</title>
+    <link href="CSS/Master.css" rel="stylesheet" type="text/css">
+    <script src="JavaScript/Main.js" defer></script>
+</head>
+<body>
+    <div class="controls">
+        <a class="btn" href="home.html">Back Home</a>
+        <button class="btn" type="button" onclick="updateGrid(4, 4)">4x4 Grid</button>
+        <button class="btn" type="button" onclick="updateGrid(6, 3)">6x3 Grid</button>
+        <button class="btn" type="button" onclick="updateGrid(9, 16)">9x16 Grid</button>
+        <button class="btn" type="button" onclick="updateGrid(10, 16)">10x16 Grid</button>
+        <button class="btn" type="button" onclick="document.getElementById('imageInput').click()">Insert Image</button>
+        <input type="file" id="imageInput" class="image-upload-input" accept="image/*" onchange="insertImage(event)" aria-label="Choose a background image">
+    </div>
+    <div class="workspace">
+        <div class="tool-list">
+            <img id="img1" class="wire-item" src="images/text-placeholder.png" alt="Text placeholder" draggable="true" width="52" height="52">
+            <img id="img2" class="wire-item" src="images/img-palceholder.png" alt="Image placeholder" draggable="true" width="52" height="52">
+            <blockquote id="text-tool" class="wire-item" contenteditable="true" draggable="true"><p>Edit Text</p></blockquote>
+        </div>
+        <div class="grid-scroll">
+            <div id="grid-container"></div>
+        </div>
+    </div>
+</body>
+</html>
