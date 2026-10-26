@@ -147,3 +147,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateGrid(3, 3);
 });
+

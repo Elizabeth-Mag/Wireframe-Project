@@ -130,10 +130,12 @@ blockquote p {
   cursor: pointer;
 }
 
+
 .btn:hover {
   background-color: #0056b3;
   color: #ffffff;
 }
+
 
 .image-upload-input {
   position: absolute;
@@ -144,4 +146,29 @@ blockquote p {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+
+
+
+.special-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #555555;
+  background-color: #f2f2f2;
+  color: #111111;
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.special-btn:hover {
+  background-color: #199700;
+  color: #ffffff;
 }
