@@ -1,23 +1,36 @@
-//Setting up drag and drop... I think
+//Setting up drag and drop
 function dragstartHandler(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
-
-function dragstartHandler2(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
 
 
 function dragoverHandler(ev) {
   ev.preventDefault(); // Default is open as link on drop 
 }
 
-//allows objects dragged and copied from hotbar to grid 
+let resizetime= false;
+//allows objects dragged and copied from tool list to grid 
 function dropHandler(ev) {
   ev.preventDefault();
   const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data).cloneNode(true));
+
+  ResizeTextBox();
+}
+
+function TextDragStart(){
+  resizetime= true;
+  console.log("its true!")
+}
+
+
+function ResizeTextBox() {
+  if (resizetime== true){
+    console.log("this happened");
+    resizetime= false;
+  }else{
+    console.log("nothing happened");
+  }
 }
 
 //allows object to move between cells still need to figure out where to put it
@@ -26,7 +39,6 @@ function dropHandler2(ev) {
   const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
-
 
 
 //grid stuff
@@ -52,3 +64,18 @@ function updateGrid(rows, cols) {
 
 // 3x3 grid on load
 updateGrid(3, 3); //Not showing on load not urgent 
+
+
+// Select all grid cells
+const cells = document.querySelectorAll('.grid-cell');
+
+cells.forEach(cell => {
+  cell.addEventListener('click', () => {
+    // Toggle the color on and off for the clicked cell
+    cell.classList.toggle('active');
+    
+  });
+});
+
+
+

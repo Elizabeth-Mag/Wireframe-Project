@@ -11,6 +11,7 @@
             <a href="home.html"><button class="btn">Back Home</button></a>
             <button class="btn" onclick="updateGrid(4, 4)">4x4 Grid</button>
             <button class="btn" onclick="updateGrid(6, 3)">6x3 Grid</button>
+            <button class="btn" onclick="updateGrid(12, 6)">12x6 Grid</button>
             <button class="btn" onclick="updateGrid(9, 16)">9x16 Grid</button>
             <button class="btn" onclick="updateGrid(10, 16)">10x16 Grid</button>
         </div>
@@ -19,7 +20,9 @@
         <div class="tool-list">
             <img id="img1" src="images/text-placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
             <img id="img2" src="images/img-palceholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
-            <blockquote contenteditable="true" draggable="true" ondragstart="dragstartHandler(event)"><p>Edit Text</p></blockquote>
+            <div id="edittext" contenteditable="true" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">Edit Text</div>
+            <div id="edittext2" contenteditable="true" draggable="true" ondragstart="dragstartHandler(event);TextDragStart()" width="52" height="52">Edit Text</div> 
+            <div id="textsizer" ><label id="sizer">Text Width:<input type=number min=0 step=1 name=textwidth></label> </div>
         </div>
     </body>
 </html>

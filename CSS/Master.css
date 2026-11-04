@@ -7,16 +7,24 @@
   gap: 2px;
   margin-top: 20px;
   width: 100%;
-  max-width: 60px;
+  max-width: 70px;
 }
 
-blockquote {
+#edittext {
   background: #eeeeee;
-  margin: 0;
+  height: 52px;
+  width: 52px;
+  overflow: auto;
 }
 
-blockquote p {
-  padding: 5%;
+#edittext2 {
+  background: #eeeeee;
+  height: 52px;
+  width: 52px;
+  overflow: auto;
+}
+
+#sizer {
   height: 52px;
   width: 52px;
 }
@@ -32,6 +40,17 @@ blockquote p {
   justify-content: center;
   height: 50px;
   width: 50px;
+  cursor: pointer;
+  
+}
+
+.grid-cell:hover{
+  background-color: #aeb2b6;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: rgb(237, 18, 18);
 }
 
 .tool-list {
@@ -40,13 +59,15 @@ blockquote p {
   gap: 5px;
   padding: 10px;
   cursor: pointer;
+  height: 52px;
+  width: 52px;
 }
 
 .btn {
   border-radius: 25%;
   height: 50px;
   width: 100px;
-  cursor: pointer; /* I love this so much its such a small thing but its so neat!! */
+  cursor: pointer;
 }
 
 .btn:hover {
