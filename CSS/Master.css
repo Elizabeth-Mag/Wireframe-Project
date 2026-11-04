@@ -42,7 +42,7 @@ body {
 }
 
 blockquote {
-  background: #eeeeee;
+  background: transparent;
   margin: 0;
 }
 
@@ -94,20 +94,6 @@ blockquote p {
   box-sizing: border-box;
 }
 
-.tool-list {
-  display: grid;
-  grid-template-columns: 60px;
-  gap: 8px;
-  padding: 8px;
-  background-color: #d5d5d5;
-  border: 1px solid #8d8d8d;
-}
-
-.tool-list .wire-item,
-.tool-list img {
-  width: 52px;
-  height: 52px;
-}
 
 .wire-item {
   cursor: grab;
@@ -149,8 +135,6 @@ blockquote p {
 }
 
 
-
-
 .special-btn {
   display: inline-flex;
   align-items: center;
@@ -172,3 +156,27 @@ blockquote p {
   background-color: #199700;
   color: #ffffff;
 }
+
+.final-workspace {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#final-page #grid-container {
+    flex-shrink: 0;
+}
+
+#final-page #grid-container.hide-grid {
+    gap: 0;
+}
+
+#final-page #grid-container.hide-grid .grid-cell {
+    outline: none;
+    border: none;
+}
+
