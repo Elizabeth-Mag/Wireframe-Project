@@ -134,7 +134,7 @@ blockquote p {
   border: 0;
 }
 
-
+/* SPECIAL BUTTON = 'VIEW FINAL' BUTTON */
 .special-btn {
   display: inline-flex;
   align-items: center;
@@ -151,7 +151,7 @@ blockquote p {
   text-decoration: none;
   cursor: pointer;
 }
-
+/* GREEN INSTEAD OF REGULAR COLOR */
 .special-btn:hover {
   background-color: #199700;
   color: #ffffff;
@@ -167,6 +167,8 @@ blockquote p {
     box-sizing: border-box;
 }
 
+
+/* FINAL PAGE CSS */
 #final-page #grid-container {
     flex-shrink: 0;
 }
