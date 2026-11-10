@@ -18,6 +18,8 @@ function dragstartHandler(event) {
     event.dataTransfer.setData("text/plain", item.id);
 }
 
+
+/* DRAG AND DROP HANDLERS */
 function dragoverHandler(event) {
     if (!event.target.closest(".grid-cell")) return;
 
@@ -73,6 +75,7 @@ function updateGrid(rows, cols) {
     saveDesign();
 }
 
+/* TEXT EDITING / PLACEMENT OF CURSOR*/
 function placeCaret(item, x, y) {
     const selection = window.getSelection();
     if (!selection) return;
@@ -91,6 +94,7 @@ function placeCaret(item, x, y) {
     selection.addRange(range);
 }
 
+/* UPLOADING IMAGE INTO GRID BACKGROUND */
 function insertImage(event) {
     const file = event.target.files && event.target.files[0];
     const grid = document.getElementById("grid-container");
@@ -119,6 +123,7 @@ function insertImage(event) {
     event.target.value = "";
 }
 
+/* LOCAL STORAGE PARTS */
 function saveDesign() {
     const grid = document.getElementById("grid-container");
     if (!grid) return;
@@ -129,6 +134,7 @@ function saveDesign() {
     localStorage.setItem("savedRows", grid.style.gridTemplateRows);
 }
 
+/* LOADS THE DESIGN INTO THE FINAL PAGE */
 function loadDesign() {
     const grid = document.getElementById("grid-container");
     if (!grid) return false;
@@ -252,7 +258,8 @@ function toggleGridLines() {
         button.textContent = "Hide Grid";
     }
 }
-// clearing the design when you go back home //
+
+/* CLEARS DESIGN WHEN YOU EXIT AND RELOAD */
 function clearSavedDesign() {
     localStorage.removeItem("savedDesign");
     localStorage.removeItem("savedBackground");
