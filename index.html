@@ -14,15 +14,22 @@
             <button class="btn" onclick="updateGrid(12, 6)">12x6 Grid</button>
             <button class="btn" onclick="updateGrid(9, 16)">9x16 Grid</button>
             <button class="btn" onclick="updateGrid(10, 16)">10x16 Grid</button>
+            <a class="special-btn" href="final.html">View Final</a>
         </div>
-        <div id="grid-container" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" ondragstart="dragstartHandler2(event)"></div>
-        <br>
-        <div class="tool-list">
-            <img id="img1" src="images/text-placeholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
-            <img id="img2" src="images/img-palceholder.png" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
-            <div id="edittext" contenteditable="true" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">Edit Text</div>
-            <div id="edittext2" contenteditable="true" draggable="true" ondragstart="dragstartHandler(event);TextDragStart()" width="52" height="52">Edit Text</div> 
-            <div id="textsizer" ><label id="sizer">Text Width:<input type=number min=0 step=1 name=textwidth></label> </div>
+        <div class = "workspace">
+            <div class="tool-list">
+                <img id="img1" class="wire-item" src="images/text-placeholder.png" alt="Text placeholder" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
+                <img id="img2" class="wire-item" src="images/img-palceholder.png" alt="Image placeholder" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">
+                <div id="edittext" class="wire-item" contenteditable="true" draggable="true" ondragstart="dragstartHandler(event)" width="52" height="52">Edit Text</div>
+                <div id="edittext2" class="wire-item" contenteditable="true" draggable="true" ondragstart="dragstartHandler(event);TextDragStart()" width="52" height="52">Edit Text</div> 
+                <div id="textsizer" ><label id="sizer">Text Width:<input type=number min=0 step=1 name=textwidth></label> </div>
+            </div>
+            <div id="grid-container" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" ondragstart="dragstartHandler2(event)"></div>
+            <br>
+            <div class="grid-scroll">
+                <div id="grid-container"></div>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
