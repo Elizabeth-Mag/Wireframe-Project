@@ -27,6 +27,34 @@ function dragoverHandler(event) {
     event.dataTransfer.dropEffect = dragAction;
 }
 
+let resizetime= false;
+
+//allows objects dragged and copied from tool list to grid 
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data).cloneNode(true));
+
+  ResizeTextBox();
+}
+
+function TextDragStart(){
+  resizetime= true;
+  console.log("its true!")
+}
+
+
+function ResizeTextBox() {
+  if (resizetime== true){
+    console.log("this happened");
+    resizetime= false;
+  }else{
+    console.log("nothing happened");
+  }
+}
+
+
+//grid stuff
 function dropHandler(event) {
     const cell = event.target.closest(".grid-cell");
     const grid = document.getElementById("grid-container");
@@ -74,6 +102,24 @@ function updateGrid(rows, cols) {
 
     saveDesign();
 }
+
+/*
+// 3x3 grid on load
+updateGrid(3, 3); //Not showing on load not urgent 
+
+
+// Select all grid cells
+const cells = document.querySelectorAll('.grid-cell');
+
+cells.forEach(cell => {
+  cell.addEventListener('click', () => {
+    // Toggle the color on and off for the clicked cell
+    cell.classList.toggle('active');
+    
+  });
+});
+/*
+
 
 /* TEXT EDITING / PLACEMENT OF CURSOR*/
 function placeCaret(item, x, y) {
